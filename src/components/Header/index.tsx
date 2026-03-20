@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
+import LanguageToggler from "./LanguageToggler";
 import menuData from "./menuData";
 import { t } from "@/i18n";
 
@@ -50,19 +51,20 @@ const Header = () => {
       if (storedLanguage) {
         setLanguage(storedLanguage);
       }
+      
+      // Listen for language changes using custom event
+      const handleLanguageChange = () => {
+        const newLanguage = localStorage.getItem('language') || 'en';
+        setLanguage(newLanguage);
+      };
+      
+      window.addEventListener('languageChange', handleLanguageChange);
+      
+      return () => {
+        window.removeEventListener('languageChange', handleLanguageChange);
+      };
     }
   }, []);
-  
-  // Handle language change
-  const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const newLocale = e.target.value;
-    setLanguage(newLocale);
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('language', newLocale);
-      // Trigger custom event for other components
-      window.dispatchEvent(new Event('languageChange'));
-    }
-  };
 
   return (
     <>
@@ -201,14 +203,7 @@ const Header = () => {
                   <ThemeToggler />
                 </div>
                 <div>
-                  <select
-                    value={language}
-                    onChange={handleLanguageChange}
-                    className="bg-transparent border border-gray-300 dark:border-gray-600 rounded-md px-3 py-1 text-sm dark:text-white focus:outline-none focus:ring-2 focus:ring-primary"
-                  >
-                    <option value="en">English</option>
-                    <option value="zh">中文</option>
-                  </select>
+                  <LanguageToggler />
                 </div>
               </div>
             </div>
