@@ -6,17 +6,20 @@ import { t } from "@/i18n";
 import AnimatedText from "@/components/Common/AnimatedText";
 
 const SignupPage = () => {
-  // Get current locale - default to 'en' on server, then update from localStorage on client
-  const [language, setLanguage] = useState('en');
-  
-  // Update language from localStorage after hydration
-  useEffect(() => {
+  // Get current locale - default to 'en' on server, then use localStorage value on client
+  const [language, setLanguage] = useState(() => {
+    // On server, default to 'en'
+    // On client, try to get from localStorage
     if (typeof window !== 'undefined') {
       const storedLanguage = localStorage.getItem('language');
-      if (storedLanguage) {
-        setLanguage(storedLanguage);
-      }
-      
+      return storedLanguage || 'en';
+    }
+    return 'en';
+  });
+  
+  // Update language from localStorage after hydration and listen for language changes
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
       // Listen for language changes using custom event
       const handleLanguageChange = () => {
         const newLanguage = localStorage.getItem('language') || 'en';
