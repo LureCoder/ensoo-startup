@@ -2,19 +2,43 @@
 
 import VideoModal from "@/components/video-modal";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import SectionTitle from "../Common/SectionTitle";
+import { t } from "@/i18n";
 
 export default function Video() {
   const [isOpen, setOpen] = useState(false);
+  const [language, setLanguage] = useState('en');
+  
+  // Update language from localStorage after hydration
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const storedLanguage = localStorage.getItem('language');
+      if (storedLanguage) {
+        setLanguage(storedLanguage);
+      }
+      
+      // Listen for language changes using custom event
+      const handleLanguageChange = () => {
+        const newLanguage = localStorage.getItem('language') || 'en';
+        setLanguage(newLanguage);
+      };
+      
+      window.addEventListener('languageChange', handleLanguageChange);
+      
+      return () => {
+        window.removeEventListener('languageChange', handleLanguageChange);
+      };
+    }
+  }, []);
 
   return (
     <>
       <section className="relative z-10 py-16 md:py-20 lg:py-28">
         <div className="container">
           <SectionTitle
-            title="We are ready to help"
-            paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+            title={t('video.title', language)}
+            paragraph={t('video.description', language)}
             center
             mb="80px"
           />

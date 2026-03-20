@@ -1,6 +1,7 @@
 import { Feature } from "@/types/feature";
+import { t } from "@/i18n";
 
-const SingleFeature = ({ feature }: { feature: Feature }) => {
+const SingleFeature = ({ feature, language }: { feature: Feature; language: string }) => {
   const { icon, title, paragraph } = feature;
   return (
     <div className="w-full">
@@ -9,10 +10,10 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
           {icon}
         </div>
         <h3 className="mb-5 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl dark:text-white">
-          {title}
+          {t(`features.items.${title}`, language)}
         </h3>
         <p className="text-body-color pr-[10px] text-base leading-relaxed font-medium">
-          {paragraph}
+          {t(`features.items.${title}_desc`, language)}
         </p>
       </div>
     </div>

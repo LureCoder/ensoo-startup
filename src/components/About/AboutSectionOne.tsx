@@ -1,5 +1,8 @@
+"use client";
 import Image from "next/image";
 import SectionTitle from "../Common/SectionTitle";
+import { useEffect, useState } from "react";
+import { t } from "@/i18n";
 
 const checkIcon = (
   <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
@@ -8,12 +11,37 @@ const checkIcon = (
 );
 
 const AboutSectionOne = () => {
-  const List = ({ text }) => (
+  // Get current locale - default to 'en' on server, then update from localStorage on client
+  const [language, setLanguage] = useState('en');
+  
+  // Update language from localStorage after hydration
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const storedLanguage = localStorage.getItem('language');
+      if (storedLanguage) {
+        setLanguage(storedLanguage);
+      }
+      
+      // Listen for language changes using custom event
+      const handleLanguageChange = () => {
+        const newLanguage = localStorage.getItem('language') || 'en';
+        setLanguage(newLanguage);
+      };
+      
+      window.addEventListener('languageChange', handleLanguageChange);
+      
+      return () => {
+        window.removeEventListener('languageChange', handleLanguageChange);
+      };
+    }
+  }, []);
+
+  const List = ({ index }) => (
     <p className="text-body-color mb-5 flex items-center text-lg font-medium">
       <span className="bg-primary/10 text-primary mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md">
         {checkIcon}
       </span>
-      {text}
+      {t(`about.features.${index}`, language)}
     </p>
   );
 
@@ -24,8 +52,8 @@ const AboutSectionOne = () => {
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
-                title="Crafted for Startup, SaaS and Business Sites."
-                paragraph="The main ‘thrust’ is to focus on educating attendees on how to best protect highly vulnerable business applications with interactive panel discussions and roundtables."
+                title={t('about.title', language)}
+                paragraph={t('about.description', language)}
                 mb="44px"
               />
 
@@ -35,15 +63,15 @@ const AboutSectionOne = () => {
               >
                 <div className="mx-[-12px] flex flex-wrap">
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Premium quality" />
-                    <List text="Tailwind CSS" />
-                    <List text="Use for lifetime" />
+                    <List index="0" />
+                    <List index="1" />
+                    <List index="2" />
                   </div>
 
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Next.js" />
-                    <List text="Rich documentation" />
-                    <List text="Developer friendly" />
+                    <List index="3" />
+                    <List index="4" />
+                    <List index="5" />
                   </div>
                 </div>
               </div>

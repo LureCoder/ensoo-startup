@@ -1,6 +1,9 @@
+"use client";
 import { Testimonial } from "@/types/testimonial";
 import SectionTitle from "../Common/SectionTitle";
 import SingleTestimonial from "./SingleTestimonial";
+import { useEffect, useState } from "react";
+import { t } from "@/i18n";
 
 const testimonialData: Testimonial[] = [
   {
@@ -33,18 +36,43 @@ const testimonialData: Testimonial[] = [
 ];
 
 const Testimonials = () => {
+  // Get current locale - default to 'en' on server, then update from localStorage on client
+  const [language, setLanguage] = useState('en');
+  
+  // Update language from localStorage after hydration
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const storedLanguage = localStorage.getItem('language');
+      if (storedLanguage) {
+        setLanguage(storedLanguage);
+      }
+      
+      // Listen for language changes using custom event
+      const handleLanguageChange = () => {
+        const newLanguage = localStorage.getItem('language') || 'en';
+        setLanguage(newLanguage);
+      };
+      
+      window.addEventListener('languageChange', handleLanguageChange);
+      
+      return () => {
+        window.removeEventListener('languageChange', handleLanguageChange);
+      };
+    }
+  }, []);
+
   return (
     <section className="dark:bg-bg-color-dark bg-gray-light relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="What Our Users Says"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          title={t('testimonials.title', language)}
+          paragraph={t('testimonials.description', language)}
           center
         />
 
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
           {testimonialData.map((testimonial) => (
-            <SingleTestimonial key={testimonial.id} testimonial={testimonial} />
+            <SingleTestimonial key={testimonial.id} testimonial={testimonial} language={language} />
           ))}
         </div>
       </div>

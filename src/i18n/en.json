@@ -1,0 +1,193 @@
+{
+  "header": {
+    "signin": "Sign In",
+    "signup": "Sign Up",
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "pricing": "Pricing",
+    "blog": "Blog",
+    "contact": "Contact",
+    "support": "Support",
+    "pages": "Pages"
+  },
+  "footer": {
+    "usefulLinks": "Useful Links",
+    "terms": "Terms",
+    "support": "Support & Help",
+    "tos": "TOS",
+    "privacyPolicy": "Privacy Policy",
+    "refundPolicy": "Refund Policy",
+    "openSupportTicket": "Open Support Ticket",
+    "termsOfUse": "Terms of Use",
+    "templateBy": "Template by",
+    "nextJsTemplates": "Next.js Templates"
+  },
+  "hero": {
+    "title": "Build your startup with our template",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lobortis.",
+    "getStarted": "Get Started",
+    "learnMore": "Learn More"
+  },
+  "about": {
+    "title": "About Page",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero.",
+    "breadcrumb": {
+      "pageName": "About",
+      "description": "Learn more about our company"
+    },
+    "features": [
+      "Premium quality",
+      "Tailwind CSS",
+      "Use for lifetime",
+      "Next.js",
+      "Rich documentation",
+      "Developer friendly"
+    ],
+    "sectionTwo": {
+      "bugFree": "Bug free code",
+      "bugFreeDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "premierSupport": "Premier support",
+      "premierSupportDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+      "nextjs": "Next.js",
+      "nextjsDesc": "Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt consectetur adipiscing elit setim."
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lobortis."
+  },
+  "pricing": {
+    "title": "Simple and Affordable Pricing",
+    "description": "There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "startFreeTrial": "Start Free Trial",
+    "features": {
+      "All UI Components": "All UI Components",
+      "Use with Unlimited Projects": "Use with Unlimited Projects",
+      "Commercial Use": "Commercial Use",
+      "Email Support": "Email Support",
+      "Lifetime Access": "Lifetime Access",
+      "Free Lifetime Updates": "Free Lifetime Updates"
+    }
+  },
+  "blog": {
+    "title": "Blog Grid",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero.",
+    "searchPlaceholder": "Search here...",
+    "relatedPosts": "Related Posts",
+    "popularCategory": "Popular Category",
+    "popularTags": "Popular Tags",
+    "by": "By",
+    "date": "Date",
+    "tags": {
+      "creative": "Creative",
+      "computer": "Computer",
+      "design": "Design"
+    },
+    "designations": {
+      "Graphic Designer": "Graphic Designer",
+      "Content Writer": "Content Writer"
+    },
+    "breadcrumb": {
+      "pageName": "Blog",
+      "description": "Read our latest blog posts"
+    },
+    "posts": [
+      {
+        "title": "Best UI components for modern websites",
+        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor."
+      },
+      {
+        "title": "9 simple ways to improve your design skills",
+        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor."
+      },
+      {
+        "title": "Tips to quickly improve your coding speed.",
+        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact Page",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero.",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "sendMessage": "Send Message"
+  },
+  "features": {
+    "title": "Main Features",
+    "description": "There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.",
+    "items": {
+      "Crafted for Startups": "Crafted for Startups",
+      "Crafted for Startups_desc": "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.",
+      "High-quality Design": "High-quality Design",
+      "High-quality Design_desc": "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.",
+      "Next.js 16 (Latest)": "Next.js 16 (Latest)",
+      "Next.js 16 (Latest)_desc": "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.",
+      "Tailwind CSS": "Tailwind CSS",
+      "Tailwind CSS_desc": "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.",
+      "Fully Customizable": "Fully Customizable",
+      "Fully Customizable_desc": "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.",
+      "Free and Open-Source": "Free and Open-Source",
+      "Free and Open-Source_desc": "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores."
+    }
+  },
+  "testimonials": {
+    "title": "What Our Users Says",
+    "description": "There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.",
+    "content": "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community."
+  },
+  "video": {
+    "title": "We are ready to help",
+    "description": "There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+  },
+  "breadcrumb": {
+    "home": "Home"
+  },
+  "signin": {
+    "title": "Sign In",
+    "description": "Login to your account for a faster checkout.",
+    "email": "Email",
+    "password": "Password",
+    "rememberMe": "Keep me signed in",
+    "forgotPassword": "Forgot Password?",
+    "signinButton": "Sign In",
+    "dontHaveAccount": "Don't have an account?",
+    "signup": "Sign Up",
+    "googleSignin": "Sign in with Google",
+    "githubSignin": "Sign in with Github",
+    "orSigninWithEmail": "Or, sign in with your email"
+  },
+  "signup": {
+    "title": "Sign Up",
+    "description": "It's totally free and super easy",
+    "name": "Full Name",
+    "email": "Work Email",
+    "password": "Your Password",
+    "confirmPassword": "Confirm Password",
+    "termsAgree": "By creating account means you agree to the",
+    "andOur": "and our",
+    "signupButton": "Sign Up",
+    "alreadyHaveAccount": "Already using Startup?",
+    "signin": "Sign In",
+    "googleSignup": "Sign up with Google",
+    "githubSignup": "Sign up with Github",
+    "orRegisterWithEmail": "Or, register with your email"
+  },
+  "404": {
+    "title": "Page Not Found",
+    "description": "The page you are looking for does not exist.",
+    "goHome": "Go Home"
+  },
+  "newsletter": {
+    "title": "Subscribe to receive future updates",
+    "description": "Lorem ipsum dolor sited Sed ullam corper consectur adipiscing Mae ornare massa quis lectus.",
+    "namePlaceholder": "Enter your name",
+    "emailPlaceholder": "Enter your email",
+    "buttonText": "Subscribe",
+    "noSpamText": "No spam guaranteed, So please don't send any spam mail."
+  }
+}

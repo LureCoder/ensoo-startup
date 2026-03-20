@@ -1,11 +1,14 @@
+import { t } from "@/i18n";
+
 const PricingBox = (props: {
   price: string;
   duration: string;
   packageName: string;
   subtitle: string;
   children: React.ReactNode;
+  language: string;
 }) => {
-  const { price, duration, packageName, subtitle, children } = props;
+  const { price, duration, packageName, subtitle, children, language } = props;
 
   return (
     <div className="w-full">
@@ -24,7 +27,7 @@ const PricingBox = (props: {
         <p className="text-body-color mb-7 text-base">{subtitle}</p>
         <div className="border-body-color/10 mb-8 border-b pb-8 dark:border-white/10">
           <button className="bg-primary/80 hover:shadow-signUp flex w-full items-center justify-center rounded-xs p-3 text-base font-semibold text-white transition duration-300 ease-in-out">
-            Start Free Trial
+            {t('pricing.startFreeTrial', language)}
           </button>
         </div>
         <div>{children}</div>

@@ -1,11 +1,14 @@
 import Link from "next/link";
+import { t } from "@/i18n";
 
 const Breadcrumb = ({
   pageName,
   description,
+  language = 'en',
 }: {
   pageName: string;
   description: string;
+  language?: string;
 }) => {
   return (
     <>
@@ -30,7 +33,7 @@ const Breadcrumb = ({
                       href="/"
                       className="pr-1 text-base font-medium text-body-color hover:text-primary"
                     >
-                      Home
+                      {t('breadcrumb.home', language)}
                     </Link>
                     <span className="mr-3 block h-2 w-2 rotate-45 border-r-2 border-t-2 border-body-color"></span>
                   </li>

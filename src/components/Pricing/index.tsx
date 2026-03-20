@@ -1,18 +1,42 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import SectionTitle from "../Common/SectionTitle";
 import OfferList from "./OfferList";
 import PricingBox from "./PricingBox";
+import { t } from "@/i18n";
 
 const Pricing = () => {
   const [isMonthly, setIsMonthly] = useState(true);
+  const [language, setLanguage] = useState('en');
+  
+  // Update language from localStorage after hydration
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const storedLanguage = localStorage.getItem('language');
+      if (storedLanguage) {
+        setLanguage(storedLanguage);
+      }
+      
+      // Listen for language changes using custom event
+      const handleLanguageChange = () => {
+        const newLanguage = localStorage.getItem('language') || 'en';
+        setLanguage(newLanguage);
+      };
+      
+      window.addEventListener('languageChange', handleLanguageChange);
+      
+      return () => {
+        window.removeEventListener('languageChange', handleLanguageChange);
+      };
+    }
+  }, []);
 
   return (
     <section id="pricing" className="relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="Simple and Affordable Pricing"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          title={t('pricing.title', language)}
+          paragraph={t('pricing.description', language)}
           center
           width="665px"
         />
@@ -27,7 +51,7 @@ const Pricing = () => {
                   : "text-dark dark:text-white"
               } mr-4 cursor-pointer text-base font-semibold`}
             >
-              Monthly
+              {t('pricing.monthly', language)}
             </span>
             <div
               onClick={() => setIsMonthly(!isMonthly)}
@@ -52,7 +76,7 @@ const Pricing = () => {
                   : "pointer-events-none text-primary"
               } ml-4 cursor-pointer text-base font-semibold`}
             >
-              Yearly
+              {t('pricing.yearly', language)}
             </span>
           </div>
         </div>
@@ -63,39 +87,42 @@ const Pricing = () => {
             price={isMonthly ? "40" : "120"}
             duration={isMonthly ? "mo" : "yr"}
             subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            language={language}
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="inactive" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
+            <OfferList text="All UI Components" status="active" language={language} />
+            <OfferList text="Use with Unlimited Projects" status="active" language={language} />
+            <OfferList text="Commercial Use" status="active" language={language} />
+            <OfferList text="Email Support" status="active" language={language} />
+            <OfferList text="Lifetime Access" status="inactive" language={language} />
+            <OfferList text="Free Lifetime Updates" status="inactive" language={language} />
           </PricingBox>
           <PricingBox
             packageName="Basic"
             price={isMonthly ? "399" : "789"}
             duration={isMonthly ? "mo" : "yr"}
             subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            language={language}
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="active" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
+            <OfferList text="All UI Components" status="active" language={language} />
+            <OfferList text="Use with Unlimited Projects" status="active" language={language} />
+            <OfferList text="Commercial Use" status="active" language={language} />
+            <OfferList text="Email Support" status="active" language={language} />
+            <OfferList text="Lifetime Access" status="active" language={language} />
+            <OfferList text="Free Lifetime Updates" status="inactive" language={language} />
           </PricingBox>
           <PricingBox
             packageName="Plus"
             price={isMonthly ? "589" : "999"}
             duration={isMonthly ? "mo" : "yr"}
             subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            language={language}
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="active" />
-            <OfferList text="Free Lifetime Updates" status="active" />
+            <OfferList text="All UI Components" status="active" language={language} />
+            <OfferList text="Use with Unlimited Projects" status="active" language={language} />
+            <OfferList text="Commercial Use" status="active" language={language} />
+            <OfferList text="Email Support" status="active" language={language} />
+            <OfferList text="Lifetime Access" status="active" language={language} />
+            <OfferList text="Free Lifetime Updates" status="active" language={language} />
           </PricingBox>
         </div>
       </div>

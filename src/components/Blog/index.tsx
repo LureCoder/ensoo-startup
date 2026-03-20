@@ -1,8 +1,36 @@
+"use client";
+
 import SectionTitle from "../Common/SectionTitle";
 import SingleBlog from "./SingleBlog";
 import blogData from "./blogData";
+import { useState, useEffect } from "react";
+import { t } from "@/i18n";
 
 const Blog = () => {
+  const [language, setLanguage] = useState('en');
+  
+  // Update language from localStorage after hydration
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const storedLanguage = localStorage.getItem('language');
+      if (storedLanguage) {
+        setLanguage(storedLanguage);
+      }
+      
+      // Listen for language changes using custom event
+      const handleLanguageChange = () => {
+        const newLanguage = localStorage.getItem('language') || 'en';
+        setLanguage(newLanguage);
+      };
+      
+      window.addEventListener('languageChange', handleLanguageChange);
+      
+      return () => {
+        window.removeEventListener('languageChange', handleLanguageChange);
+      };
+    }
+  }, []);
+
   return (
     <section
       id="blog"
@@ -10,15 +38,15 @@ const Blog = () => {
     >
       <div className="container">
         <SectionTitle
-          title="Our Latest Blogs"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          title={t('blog.title', language)}
+          paragraph={t('blog.description', language)}
           center
         />
 
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 md:gap-x-6 lg:gap-x-8 xl:grid-cols-3">
           {blogData.map((blog) => (
             <div key={blog.id} className="w-full">
-              <SingleBlog blog={blog} />
+              <SingleBlog blog={blog} language={language} />
             </div>
           ))}
         </div>

@@ -1,9 +1,24 @@
 import { Blog } from "@/types/blog";
 import Image from "next/image";
 import Link from "next/link";
+import { t } from "@/i18n";
 
-const SingleBlog = ({ blog }: { blog: Blog }) => {
-  const { title, image, paragraph, author, tags, publishDate } = blog;
+const SingleBlog = ({ blog, language }: { blog: Blog; language: string }) => {
+  const { id, image, author, tags, publishDate } = blog;
+  
+  // Calculate the index for the translation array
+  const postIndex = id - 1;
+  
+  // Get the translated title and paragraph
+  const title = t(`blog.posts.${postIndex}.title`, language);
+  const paragraph = t(`blog.posts.${postIndex}.paragraph`, language);
+  
+  // Get the translated tag
+  const translatedTag = tags.length > 0 ? t(`blog.tags.${tags[0]}`, language) : '';
+  
+  // Get the translated designation
+  const translatedDesignation = author.designation ? t(`blog.designations.${author.designation}`, language) : '';
+  
   return (
     <>
       <div className="group shadow-one hover:shadow-two dark:bg-dark dark:hover:shadow-gray-dark relative overflow-hidden rounded-xs bg-white duration-300">
@@ -12,7 +27,7 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
           className="relative block aspect-37/22 w-full"
         >
           <span className="bg-primary absolute top-6 right-6 z-20 inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-semibold text-white capitalize">
-            {tags[0]}
+            {translatedTag}
           </span>
           <Image src={image} alt="image" fill />
         </Link>
@@ -37,14 +52,14 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
               </div>
               <div className="w-full">
                 <h4 className="text-dark mb-1 text-sm font-medium dark:text-white">
-                  By {author.name}
+                  {t('blog.by', language)} {author.name}
                 </h4>
-                <p className="text-body-color text-xs">{author.designation}</p>
+                <p className="text-body-color text-xs">{translatedDesignation}</p>
               </div>
             </div>
             <div className="inline-block">
               <h4 className="text-dark mb-1 text-sm font-medium dark:text-white">
-                Date
+                {t('blog.date', language)}
               </h4>
               <p className="text-body-color text-xs">{publishDate}</p>
             </div>
