@@ -2,6 +2,7 @@
 import NewsLatterBox from "./NewsLatterBox";
 import { useEffect, useState } from "react";
 import { t } from "@/i18n";
+import AnimatedText from "@/components/Common/AnimatedText";
 
 const Contact = () => {
   // Get current locale - default to 'en' on server, then update from localStorage on client
@@ -39,10 +40,14 @@ const Contact = () => {
               "
             >
               <h2 className="mb-3 text-2xl font-bold text-black dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
-                {t('contact.title', language)}
+                <AnimatedText>
+                  {t('contact.title', language)}
+                </AnimatedText>
               </h2>
               <p className="mb-12 text-base font-medium text-body-color">
-                {t('contact.description', language)}
+                <AnimatedText>
+                  {t('contact.description', language)}
+                </AnimatedText>
               </p>
               <form>
                 <div className="-mx-4 flex flex-wrap">
@@ -52,7 +57,9 @@ const Contact = () => {
                         htmlFor="name"
                         className="mb-3 block text-sm font-medium text-dark dark:text-white"
                       >
-                        {t('contact.name', language)}
+                        <AnimatedText>
+                          {t('contact.name', language)}
+                        </AnimatedText>
                       </label>
                       <input
                         type="text"
@@ -67,7 +74,9 @@ const Contact = () => {
                         htmlFor="email"
                         className="mb-3 block text-sm font-medium text-dark dark:text-white"
                       >
-                        {t('contact.email', language)}
+                        <AnimatedText>
+                          {t('contact.email', language)}
+                        </AnimatedText>
                       </label>
                       <input
                         type="email"
@@ -82,7 +91,9 @@ const Contact = () => {
                         htmlFor="message"
                         className="mb-3 block text-sm font-medium text-dark dark:text-white"
                       >
-                        {t('contact.message', language)}
+                        <AnimatedText>
+                          {t('contact.message', language)}
+                        </AnimatedText>
                       </label>
                       <textarea
                         name="message"
@@ -94,7 +105,9 @@ const Contact = () => {
                   </div>
                   <div className="w-full px-4">
                     <button className="rounded-xs bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark">
-                      {t('contact.sendMessage', language)}
+                      <AnimatedText>
+                        {t('contact.sendMessage', language)}
+                      </AnimatedText>
                     </button>
                   </div>
                 </div>

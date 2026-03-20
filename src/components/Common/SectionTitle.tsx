@@ -1,3 +1,5 @@
+import AnimatedText from "./AnimatedText";
+
 const SectionTitle = ({
   title,
   paragraph,
@@ -18,10 +20,10 @@ const SectionTitle = ({
         style={{ maxWidth: width, marginBottom: mb }}
       >
         <h2 className="mb-4 text-3xl font-bold leading-tight! text-black dark:text-white sm:text-4xl md:text-[45px]">
-          {title}
+          <AnimatedText>{title}</AnimatedText>
         </h2>
         <p className="text-base leading-relaxed! text-body-color md:text-lg">
-          {paragraph}
+          <AnimatedText>{paragraph}</AnimatedText>
         </p>
       </div>
     </>

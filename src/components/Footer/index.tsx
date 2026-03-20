@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { t } from "@/i18n";
+import AnimatedText from "@/components/Common/AnimatedText";
 
 const Footer = () => {
   // Get current locale - default to 'en' on server, then update from localStorage on client
@@ -139,7 +140,9 @@ const Footer = () => {
             <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                  {t('footer.usefulLinks', language)}
+                  <AnimatedText>
+                    {t('footer.usefulLinks', language)}
+                  </AnimatedText>
                 </h2>
                 <ul>
                   <li>
@@ -147,7 +150,9 @@ const Footer = () => {
                     href="/blog"
                     className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                   >
-                    {t('header.blog', language)}
+                    <AnimatedText>
+                      {t('header.blog', language)}
+                    </AnimatedText>
                   </Link>
                 </li>
                 <li>
@@ -155,7 +160,9 @@ const Footer = () => {
                     href="/"
                     className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                   >
-                    {t('header.pricing', language)}
+                    <AnimatedText>
+                      {t('header.pricing', language)}
+                    </AnimatedText>
                   </Link>
                 </li>
                 <li>
@@ -163,7 +170,9 @@ const Footer = () => {
                     href="/about"
                     className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                   >
-                    {t('header.about', language)}
+                    <AnimatedText>
+                      {t('header.about', language)}
+                    </AnimatedText>
                   </Link>
                 </li>
                 </ul>

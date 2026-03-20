@@ -3,6 +3,7 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import Contact from "@/components/Contact";
 import { useEffect, useState } from "react";
+import { t } from "@/i18n";
 
 const ContactPage = () => {
   // Get current locale - default to 'en' on server, then update from localStorage on client
@@ -33,8 +34,8 @@ const ContactPage = () => {
   return (
     <>
       <Breadcrumb
-        pageName="Contact"
-        description="Get in touch with us"
+        pageName={t('contact.breadcrumb.pageName', language)}
+        description={t('contact.breadcrumb.description', language)}
         language={language}
       />
 

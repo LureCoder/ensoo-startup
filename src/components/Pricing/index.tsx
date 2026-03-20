@@ -4,6 +4,7 @@ import SectionTitle from "../Common/SectionTitle";
 import OfferList from "./OfferList";
 import PricingBox from "./PricingBox";
 import { t } from "@/i18n";
+import AnimatedText from "@/components/Common/AnimatedText";
 
 const Pricing = () => {
   const [isMonthly, setIsMonthly] = useState(true);
@@ -51,7 +52,9 @@ const Pricing = () => {
                   : "text-dark dark:text-white"
               } mr-4 cursor-pointer text-base font-semibold`}
             >
-              {t('pricing.monthly', language)}
+              <AnimatedText>
+                {t('pricing.monthly', language)}
+              </AnimatedText>
             </span>
             <div
               onClick={() => setIsMonthly(!isMonthly)}
@@ -76,7 +79,9 @@ const Pricing = () => {
                   : "pointer-events-none text-primary"
               } ml-4 cursor-pointer text-base font-semibold`}
             >
-              {t('pricing.yearly', language)}
+              <AnimatedText>
+                {t('pricing.yearly', language)}
+              </AnimatedText>
             </span>
           </div>
         </div>

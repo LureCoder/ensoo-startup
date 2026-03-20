@@ -7,6 +7,7 @@ import ThemeToggler from "./ThemeToggler";
 import LanguageToggler from "./LanguageToggler";
 import menuData from "./menuData";
 import { t } from "@/i18n";
+import AnimatedText from "@/components/Common/AnimatedText";
 
 const Header = () => {
   // Navbar toggle
@@ -144,7 +145,9 @@ const Header = () => {
                                 : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
                             }`}
                           >
-                            {t(`header.${menuItem.title.toLowerCase()}`, language) || menuItem.title}
+                            <AnimatedText>
+                              {t(`header.${menuItem.title.toLowerCase()}`, language) || menuItem.title}
+                            </AnimatedText>
                           </Link>
                         ) : (
                           <>
@@ -152,7 +155,9 @@ const Header = () => {
                               onClick={() => handleSubmenu(index)}
                               className="text-dark group-hover:text-primary flex cursor-pointer items-center justify-between py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 dark:text-white/70 dark:group-hover:text-white"
                             >
-                              {t(`header.${menuItem.title.toLowerCase()}`, language) || menuItem.title}
+                              <AnimatedText>
+                                {t(`header.${menuItem.title.toLowerCase()}`, language) || menuItem.title}
+                              </AnimatedText>
                               <span className="pl-3">
                                 <svg width="25" height="24" viewBox="0 0 25 24">
                                   <path
@@ -175,7 +180,9 @@ const Header = () => {
                                   key={index}
                                   className="text-dark hover:text-primary block rounded-sm py-2.5 text-sm lg:px-3 dark:text-white/70 dark:hover:text-white"
                                 >
-                                  {submenuItem.title}
+                                  <AnimatedText>
+                                {t(`header.submenu.${submenuItem.title.toLowerCase().replace(/\s+/g, '-')}`, language) || submenuItem.title}
+                              </AnimatedText>
                                 </Link>
                               ))}
                             </div>
@@ -191,13 +198,17 @@ const Header = () => {
                   href="/signin"
                   className="text-dark hidden px-7 py-3 text-base font-medium hover:opacity-70 md:block dark:text-white"
                 >
-                  {t('header.signin', language)}
+                  <AnimatedText>
+                    {t('header.signin', language)}
+                  </AnimatedText>
                 </Link>
                 <Link
                   href="/signup"
                   className="ease-in-up shadow-btn hover:shadow-btn-hover bg-primary hover:bg-primary/90 hidden rounded-xs px-8 py-3 text-base font-medium text-white transition duration-300 md:block md:px-9 lg:px-6 xl:px-9"
                 >
-                  {t('header.signup', language)}
+                  <AnimatedText>
+                    {t('header.signup', language)}
+                  </AnimatedText>
                 </Link>
                 <div className="mr-4">
                   <ThemeToggler />

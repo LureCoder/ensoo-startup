@@ -9,7 +9,17 @@
     "blog": "博客",
     "contact": "联系我们",
     "support": "支持",
-    "pages": "页面"
+    "pages": "页面",
+    "submenu": {
+      "about-page": "关于我们页面",
+      "contact-page": "联系我们页面",
+      "blog-grid-page": "博客网格页面",
+      "blog-sidebar-page": "博客侧边栏页面",
+      "blog-details-page": "博客详情页面",
+      "sign-in-page": "登录页面",
+      "sign-up-page": "注册页面",
+      "error-page": "错误页面"
+    }
   },
   "footer": {
     "usefulLinks": "有用链接",
@@ -115,7 +125,11 @@
     "name": "姓名",
     "email": "邮箱",
     "message": "留言",
-    "sendMessage": "发送消息"
+    "sendMessage": "发送消息",
+    "breadcrumb": {
+      "pageName": "联系我们",
+      "description": "与我们取得联系"
+    }
   },
   "features": {
     "title": "主要特性",
@@ -181,6 +195,12 @@
     "title": "页面未找到",
     "description": "您正在寻找的页面不存在。",
     "goHome": "返回首页"
+  },
+  "blogDetails": {
+    "title": "博客详情",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero.",
+    "author": "约翰·多伊",
+    "date": "2023年5月15日"
   },
   "newsletter": {
     "title": "订阅以接收未来更新",

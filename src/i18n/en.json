@@ -9,7 +9,17 @@
     "blog": "Blog",
     "contact": "Contact",
     "support": "Support",
-    "pages": "Pages"
+    "pages": "Pages",
+    "submenu": {
+      "about-page": "About Page",
+      "contact-page": "Contact Page",
+      "blog-grid-page": "Blog Grid Page",
+      "blog-sidebar-page": "Blog Sidebar Page",
+      "blog-details-page": "Blog Details Page",
+      "sign-in-page": "Sign In Page",
+      "sign-up-page": "Sign Up Page",
+      "error-page": "Error Page"
+    }
   },
   "footer": {
     "usefulLinks": "Useful Links",
@@ -115,7 +125,11 @@
     "name": "Name",
     "email": "Email",
     "message": "Message",
-    "sendMessage": "Send Message"
+    "sendMessage": "Send Message",
+    "breadcrumb": {
+      "pageName": "Contact",
+      "description": "Get in touch with us"
+    }
   },
   "features": {
     "title": "Main Features",
@@ -181,6 +195,12 @@
     "title": "Page Not Found",
     "description": "The page you are looking for does not exist.",
     "goHome": "Go Home"
+  },
+  "blogDetails": {
+    "title": "Blog Details",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero.",
+    "author": "John Doe",
+    "date": "May 15, 2023"
   },
   "newsletter": {
     "title": "Subscribe to receive future updates",

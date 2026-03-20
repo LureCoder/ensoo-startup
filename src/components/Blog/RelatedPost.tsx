@@ -1,16 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
+import { t } from "@/i18n";
+import AnimatedText from "@/components/Common/AnimatedText";
 
 const RelatedPost = ({
   image,
   slug,
   title,
   date,
+  language = 'en',
 }: {
   image: string;
   slug: string;
   title: string;
   date: string;
+  language?: string;
 }) => {
   return (
     <div className="flex items-center lg:block xl:flex">
@@ -25,7 +29,9 @@ const RelatedPost = ({
             href={slug}
             className="mb-[6px] block text-base font-medium leading-snug text-black hover:text-primary dark:text-white dark:hover:text-primary"
           >
-            {title}
+            <AnimatedText>
+              {title}
+            </AnimatedText>
           </Link>
         </h5>
         <p className="text-xs font-medium text-body-color">{date}</p>

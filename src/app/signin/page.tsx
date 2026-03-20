@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { t } from "@/i18n";
+import AnimatedText from "@/components/Common/AnimatedText";
 
 const SigninPage = () => {
   // Get current locale - default to 'en' on server, then update from localStorage on client
@@ -38,15 +39,21 @@ const SigninPage = () => {
             <div className="w-full px-4">
               <div className="relative mx-auto max-w-[500px] overflow-hidden rounded-lg bg-white px-8 py-10 shadow-one dark:bg-gray-dark sm:p-[55px]">
                 <h3 className="mb-4 text-2xl font-bold text-black dark:text-white sm:text-3xl">
-                  {t('signin.title', language)}
+                  <AnimatedText>
+                    {t('signin.title', language)}
+                  </AnimatedText>
                 </h3>
                 <p className="mb-7 text-base font-medium text-body-color dark:text-body-color-dark">
-                  {t('signin.description', language)}
+                  <AnimatedText>
+                    {t('signin.description', language)}
+                  </AnimatedText>
                 </p>
                 <form>
                   <div className="mb-6">
                     <label className="mb-2 block text-sm font-medium text-black dark:text-white">
-                      {t('signin.email', language)}
+                      <AnimatedText>
+                        {t('signin.email', language)}
+                      </AnimatedText>
                     </label>
                     <input
                       type="email"
@@ -56,7 +63,9 @@ const SigninPage = () => {
                   </div>
                   <div className="mb-6">
                     <label className="mb-2 block text-sm font-medium text-black dark:text-white">
-                      {t('signin.password', language)}
+                      <AnimatedText>
+                        {t('signin.password', language)}
+                      </AnimatedText>
                     </label>
                     <input
                       type="password"
@@ -68,26 +77,37 @@ const SigninPage = () => {
                     <label className="flex cursor-pointer items-center">
                       <input type="checkbox" className="mr-2" />
                       <span className="text-sm font-medium text-body-color dark:text-body-color-dark">
-                        {t('signin.rememberMe', language)}
+                        <AnimatedText>
+                          {t('signin.rememberMe', language)}
+                        </AnimatedText>
                       </span>
                     </label>
                     <a
                       href="#"
                       className="text-sm font-medium text-primary hover:underline"
                     >
-                      {t('signin.forgotPassword', language)}
+                      <AnimatedText>
+                        {t('signin.forgotPassword', language)}
+                      </AnimatedText>
                     </a>
                   </div>
                   <div className="mb-6">
                     <button className="flex w-full items-center justify-center rounded-md bg-primary px-9 py-4 text-base font-semibold text-white duration-300 hover:bg-primary/90">
-                      {t('signin.signinButton', language)}
+                      <AnimatedText>
+                        {t('signin.signinButton', language)}
+                      </AnimatedText>
                     </button>
                   </div>
                 </form>
                 <p className="text-center text-base font-medium text-body-color dark:text-body-color-dark">
-                  {t('signin.dontHaveAccount', language)} {" "}
+                  <AnimatedText>
+                    {t('signin.dontHaveAccount', language)}
+                  </AnimatedText>
+                  {" "}
                   <a href="/signup" className="text-primary hover:underline">
-                    {t('signin.signup', language)}
+                    <AnimatedText>
+                      {t('signin.signup', language)}
+                    </AnimatedText>
                   </a>
                 </p>
               </div>

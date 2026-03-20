@@ -1,4 +1,5 @@
 import { t } from "@/i18n";
+import AnimatedText from "@/components/Common/AnimatedText";
 
 const checkIcon = (
   <svg width="8" height="6" viewBox="0 0 8 6" className="fill-current">
@@ -26,7 +27,11 @@ const OfferList = ({
       <span className="bg-primary/10 mr-3 flex h-[18px] w-full max-w-[18px] items-center justify-center rounded-full text-white">
         {status === "active" ? checkIcon : crossIcon}
       </span>
-      <p className="text-body-color m-0 text-base font-medium">{t(`pricing.features.${text}`, language) || text}</p>
+      <p className="text-body-color m-0 text-base font-medium">
+        <AnimatedText>
+          {t(`pricing.features.${text}`, language) || text}
+        </AnimatedText>
+      </p>
     </div>
   );
 };

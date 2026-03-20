@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { t } from "@/i18n";
+import AnimatedText from "@/components/Common/AnimatedText";
 
 const AboutSectionTwo = () => {
   const [language, setLanguage] = useState('en');
@@ -56,26 +57,38 @@ const AboutSectionTwo = () => {
             <div className="max-w-[470px]">
               <div className="mb-9">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  {t('about.sectionTwo.bugFree', language)}
+                  <AnimatedText>
+                    {t('about.sectionTwo.bugFree', language)}
+                  </AnimatedText>
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  {t('about.sectionTwo.bugFreeDesc', language)}
+                  <AnimatedText>
+                    {t('about.sectionTwo.bugFreeDesc', language)}
+                  </AnimatedText>
                 </p>
               </div>
               <div className="mb-9">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  {t('about.sectionTwo.premierSupport', language)}
+                  <AnimatedText>
+                    {t('about.sectionTwo.premierSupport', language)}
+                  </AnimatedText>
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  {t('about.sectionTwo.premierSupportDesc', language)}
+                  <AnimatedText>
+                    {t('about.sectionTwo.premierSupportDesc', language)}
+                  </AnimatedText>
                 </p>
               </div>
               <div className="mb-1">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  {t('about.sectionTwo.nextjs', language)}
+                  <AnimatedText>
+                    {t('about.sectionTwo.nextjs', language)}
+                  </AnimatedText>
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  {t('about.sectionTwo.nextjsDesc', language)}
+                  <AnimatedText>
+                    {t('about.sectionTwo.nextjsDesc', language)}
+                  </AnimatedText>
                 </p>
               </div>
             </div>

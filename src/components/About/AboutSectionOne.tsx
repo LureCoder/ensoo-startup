@@ -3,6 +3,7 @@ import Image from "next/image";
 import SectionTitle from "../Common/SectionTitle";
 import { useEffect, useState } from "react";
 import { t } from "@/i18n";
+import AnimatedText from "@/components/Common/AnimatedText";
 
 const checkIcon = (
   <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
@@ -41,7 +42,9 @@ const AboutSectionOne = () => {
       <span className="bg-primary/10 text-primary mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md">
         {checkIcon}
       </span>
-      {t(`about.features.${index}`, language)}
+      <AnimatedText>
+        {t(`about.features.${index}`, language)}
+      </AnimatedText>
     </p>
   );
 
