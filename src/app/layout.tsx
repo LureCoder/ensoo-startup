@@ -15,8 +15,8 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning>
       <head>
-        <title>Enso for You</title>
-        <meta name="description" content="Enso for You" />
+        <title>Ensoo for You</title>
+        <meta name="description" content="Ensoo for You" />
         <link rel="icon" href="/favicon.ico" />
       </head>
 
