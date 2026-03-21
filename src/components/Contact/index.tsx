@@ -1,5 +1,6 @@
 "use client";
 import NewsLatterBox from "./NewsLatterBox";
+import QRCodeSection from "./QRCodeSection";
 import { useEffect, useState } from "react";
 import { t18n } from "@/i18n";
 import AnimatedText from "@/components/Common/AnimatedText";
@@ -15,7 +16,9 @@ const Contact = () => {
   }, []);
 
   return (
-    <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28">
+    <>
+      <QRCodeSection />
+      <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28">
       <div className="container">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4 lg:w-7/12 xl:w-8/12">
@@ -105,6 +108,7 @@ const Contact = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

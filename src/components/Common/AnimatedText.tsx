@@ -2,17 +2,17 @@
 import { useState, useEffect } from "react";
 
 interface AnimatedTextProps {
-  children: string;
+  children: string | string[];
   className?: string;
 }
 
 const AnimatedText: React.FC<AnimatedTextProps> = ({ children, className = "" }) => {
   const [isVisible, setIsVisible] = useState(true);
-  const [displayedText, setDisplayedText] = useState(children);
+  const [displayedText, setDisplayedText] = useState<string | string[]>(children);
 
   useEffect(() => {
     // When children changes (language changes), trigger animation
-    if (displayedText !== children) {
+    if (JSON.stringify(displayedText) !== JSON.stringify(children)) {
       // Fade out
       setIsVisible(false);
       
@@ -27,6 +27,18 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({ children, className = "" })
     }
   }, [children, displayedText]);
 
+  const renderText = (text: string | string[]) => {
+    if (Array.isArray(text)) {
+      return text.map((line, index) => (
+        <span key={index}>
+          {line}
+          {index < text.length - 1 && <br />}
+        </span>
+      ));
+    }
+    return text;
+  };
+
   return (
     <span
       suppressHydrationWarning
@@ -39,7 +51,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({ children, className = "" })
         transition: 'opacity 100ms ease-in-out, transform 100ms ease-in-out',
       }}
     >
-      {displayedText}
+      {renderText(displayedText)}
     </span>
   );
 };

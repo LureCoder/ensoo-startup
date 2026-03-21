@@ -42,7 +42,13 @@
   },
   "about": {
     "title": "关于我们",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero.",
+    "description": [
+      "我们是一支拥有17 年银行级金融系统开发经验的资深技术团队，专注企业级全栈开发、云原生架构与高可用系统交付。",
+      "团队精通 Java 全栈、微服务架构、API 设计、K8s / 云平台部署、高并发优化与系统上云迁移，可独立完成需求→设计→开发→测试→部署→运维全流程外包项目。",
+      "深耕银行核心系统、财富管理、电话银行、反洗钱等高安全场景，线上系统稳定性达99.999%，严守金融级安全与合规标准。",
+      "承接：企业系统开发、旧站重构、技术升级、接口集成、云迁移、性能优化、自动化平台搭建。",
+      "工期可控、质量稳定、响应迅速、长期售后，为您提供一站式可靠技术外包服务。"
+    ],
     "breadcrumb": {
       "pageName": "关于我们",
       "description": "了解更多关于我们公司的信息"
@@ -127,6 +133,15 @@
     "email": "邮箱",
     "message": "留言",
     "sendMessage": "发送消息",
+    "qrCode": {
+      "title": "扫描我们的二维码",
+      "description": "扫描下方二维码与我们联系",
+      "clickToEnlarge": "点击放大",
+      "wechatTitle": "微信",
+      "wechatDescription": "扫描二维码添加微信",
+      "whatsappTitle": "WhatsApp",
+      "whatsappDescription": "扫描二维码添加 WhatsApp"
+    },
     "breadcrumb": {
       "pageName": "联系我们",
       "description": "与我们取得联系"

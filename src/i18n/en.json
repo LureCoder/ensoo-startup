@@ -127,6 +127,15 @@
     "email": "Email",
     "message": "Message",
     "sendMessage": "Send Message",
+    "qrCode": {
+      "title": "Scan Our QR Code",
+      "description": "Scan the QR code below to connect with us",
+      "clickToEnlarge": "Click to enlarge",
+      "wechatTitle": "WeChat",
+      "wechatDescription": "Scan to connect on WeChat",
+      "whatsappTitle": "WhatsApp",
+      "whatsappDescription": "Scan to connect on WhatsApp"
+    },
     "breadcrumb": {
       "pageName": "Contact",
       "description": "Get in touch with us"

@@ -2,7 +2,7 @@
 import Image from "next/image";
 import SectionTitle from "../Common/SectionTitle";
 import { useEffect, useState } from "react";
-import { t18n } from "@/i18n";
+import { t18n, t18nArray } from "@/i18n";
 import AnimatedText from "@/components/Common/AnimatedText";
 import { useLanguage } from "@/hooks/useLanguage";
 
@@ -35,7 +35,7 @@ const AboutSectionOne = () => {
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
                 title={t18n('about.title', language)}
-                paragraph={t18n('about.description', language)}
+                paragraph={t18nArray('about.description', language)}
                 mb="44px"
               />
 
