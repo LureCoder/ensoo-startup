@@ -1,0 +1,19 @@
+{
+  "name": "Next.js Development",
+  "description": "Expert in Next.js 16 with Turbopack, React 19, and Tailwind CSS 4",
+  "tags": ["nextjs", "react", "tailwind", "typescript"],
+  "level": "advanced",
+  "experience": "5 years",
+  "projects": [
+    "Startup website template",
+    "E-commerce platform",
+    "Content management system"
+  ],
+  "tools": [
+    "Next.js 16",
+    "React 19",
+    "Tailwind CSS 4",
+    "TypeScript",
+    "Vercel"
+  ]
+}
