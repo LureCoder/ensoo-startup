@@ -42,7 +42,13 @@
   },
   "about": {
     "title": "About Page",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero.",
+    "description": [
+      "We are a senior technical team with 17 years of experience in banking-grade financial system development, specializing in enterprise full-stack development, cloud-native architecture, and high-availability system delivery.",
+      "Our team excels in Java full-stack, microservices architecture, API design, K8s/cloud platform deployment, high-concurrency optimization, and cloud migration. We can independently handle the entire outsourcing process from requirements to design, development, testing, deployment, and operations.",
+      "We have deep expertise in banking core systems, wealth management, telephone banking, anti-money laundering, and other high-security scenarios. Our online systems achieve 99.999% stability, strictly adhering to financial-grade security and compliance standards.",
+      "We undertake: enterprise system development, legacy system refactoring, technology upgrades, API integration, cloud migration, performance optimization, and automation platform construction.",
+      "With controllable timelines, stable quality, rapid response, and long-term support, we provide you with reliable one-stop technical outsourcing services."
+    ],
     "breadcrumb": {
       "pageName": "About",
       "description": "Learn more about our company"
