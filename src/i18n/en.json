@@ -10,6 +10,7 @@
     "contact": "Contact",
     "support": "Support",
     "pages": "Pages",
+    "our products": "Our Products",
     "submenu": {
       "about-page": "About Page",
       "contact-page": "Contact Page",
@@ -207,6 +208,72 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero.",
     "author": "John Doe",
     "date": "May 15, 2023"
+  },
+  "products": {
+    "title": "Our Products",
+    "description": "Discover our innovative products designed to transform your business. We offer cutting-edge solutions that combine quality, performance, and user experience.",
+    "author": "Product Team",
+    "date": "2024",
+    "price": "Price",
+    "viewDetails": "View Details",
+    "breadcrumb": {
+      "pageName": "Products",
+      "description": "Explore our innovative product lineup"
+    },
+    "categories": {
+      "cloud": "Cloud",
+      "analytics": "Analytics",
+      "security": "Security",
+      "ai": "AI",
+      "devops": "DevOps",
+      "crm": "CRM"
+    },
+    "features": {
+      "autoScaling": "Auto-scaling",
+      "uptime": "99.9% Uptime",
+      "support247": "24/7 Support",
+      "realtimeData": "Real-time Data",
+      "customReports": "Custom Reports",
+      "apiAccess": "API Access",
+      "encryption": "Encryption",
+      "threatDetection": "Threat Detection",
+      "compliance": "Compliance",
+      "naturalLanguage": "Natural Language",
+      "taskAutomation": "Task Automation",
+      "integration": "Integration",
+      "cicdPipeline": "CI/CD Pipeline",
+      "containerSupport": "Container Support",
+      "monitoring": "Monitoring",
+      "contactManagement": "Contact Management",
+      "salesPipeline": "Sales Pipeline",
+      "reporting": "Reporting"
+    },
+    "items": [
+      {
+        "title": "Cloud Platform",
+        "description": "Scalable cloud infrastructure for modern applications"
+      },
+      {
+        "title": "Analytics Dashboard",
+        "description": "Real-time analytics and insights for your business"
+      },
+      {
+        "title": "Security Suite",
+        "description": "Enterprise-grade security solutions for your data"
+      },
+      {
+        "title": "AI Assistant",
+        "description": "Intelligent automation powered by machine learning"
+      },
+      {
+        "title": "DevOps Tools",
+        "description": "Streamline your development and deployment workflow"
+      },
+      {
+        "title": "CRM Platform",
+        "description": "Manage customer relationships with powerful tools"
+      }
+    ]
   },
   "newsletter": {
     "title": "Subscribe to receive future updates",

@@ -113,7 +113,7 @@ const Header = () => {
                   }`}
                 >
                   <ul className="block lg:flex lg:space-x-12">
-                    {menuData.map((menuItem, index) => (
+                    {menuData.filter((menuItem) => menuItem.visible !== false).map((menuItem, index) => (
                       <li key={index} className="group relative">
                         {menuItem.path ? (
                           <Link
@@ -153,7 +153,7 @@ const Header = () => {
                                 openIndex === index ? "block" : "hidden"
                               }`}
                             >
-                              {menuItem.submenu.map((submenuItem, index) => (
+                              {menuItem.submenu?.filter((submenuItem) => submenuItem.visible !== false).map((submenuItem, index) => (
                                 <Link
                                   href={submenuItem.path}
                                   key={index}

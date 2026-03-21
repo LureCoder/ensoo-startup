@@ -10,6 +10,7 @@
     "contact": "联系我们",
     "support": "支持",
     "pages": "页面",
+    "our products": "我们的产品",
     "submenu": {
       "about-page": "关于我们页面",
       "contact-page": "联系我们页面",
@@ -207,6 +208,72 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero.",
     "author": "约翰·多伊",
     "date": "2023年5月15日"
+  },
+  "products": {
+    "title": "我们的产品",
+    "description": "发现我们旨在改变您业务的创新产品。我们提供结合质量、性能和用户体验的前沿解决方案。",
+    "author": "产品团队",
+    "date": "2024年",
+    "price": "价格",
+    "viewDetails": "查看详情",
+    "breadcrumb": {
+      "pageName": "产品",
+      "description": "探索我们的创新产品系列"
+    },
+    "categories": {
+      "cloud": "云服务",
+      "analytics": "数据分析",
+      "security": "安全",
+      "ai": "人工智能",
+      "devops": "DevOps",
+      "crm": "CRM"
+    },
+    "features": {
+      "autoScaling": "自动扩展",
+      "uptime": "99.9% 正常运行时间",
+      "support247": "24/7 支持",
+      "realtimeData": "实时数据",
+      "customReports": "自定义报告",
+      "apiAccess": "API 访问",
+      "encryption": "加密",
+      "threatDetection": "威胁检测",
+      "compliance": "合规性",
+      "naturalLanguage": "自然语言",
+      "taskAutomation": "任务自动化",
+      "integration": "集成",
+      "cicdPipeline": "CI/CD 流水线",
+      "containerSupport": "容器支持",
+      "monitoring": "监控",
+      "contactManagement": "联系人管理",
+      "salesPipeline": "销售管道",
+      "reporting": "报告"
+    },
+    "items": [
+      {
+        "title": "云平台",
+        "description": "为现代应用程序提供可扩展的云基础设施"
+      },
+      {
+        "title": "分析仪表板",
+        "description": "为您的业务提供实时分析和洞察"
+      },
+      {
+        "title": "安全套件",
+        "description": "为企业数据提供企业级安全解决方案"
+      },
+      {
+        "title": "AI 助手",
+        "description": "由机器学习驱动的智能自动化"
+      },
+      {
+        "title": "DevOps 工具",
+        "description": "简化您的开发和部署工作流程"
+      },
+      {
+        "title": "CRM 平台",
+        "description": "使用强大工具管理客户关系"
+      }
+    ]
   },
   "newsletter": {
     "title": "订阅以接收未来更新",
