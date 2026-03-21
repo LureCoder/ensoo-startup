@@ -6,6 +6,7 @@ import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/image-gallery.css";
 import { t18n } from "@/i18n";
 import { useLanguage } from "@/hooks/useLanguage";
+import { useState } from "react";
 import AnimatedText from "@/components/Common/AnimatedText";
 
 // Add heartbeat animation styles
@@ -58,6 +59,7 @@ interface Product {
 
 export default function ProductDetailsClient({ product }: { product: Product }) {
   const language = useLanguage();
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const translatedCategory = t18n(
     `products.categories.${product.category}`,
@@ -112,24 +114,24 @@ export default function ProductDetailsClient({ product }: { product: Product }) 
                 thumbnail: galleryItem.image
               }))}
               showThumbnails={true}
-              showFullscreenButton={true}
+              showFullscreenButton={false}
               showPlayButton={false}
               autoPlay={false}
+              onSlide={(index) => setCurrentIndex(index)}
               renderCustomControls={() => {
-                if (product.gallery.length > 0 && product.gallery[0].url) {
+                const currentItem = product.gallery[currentIndex];
+                if (currentItem && currentItem.url) {
                   return (
                     <button
                       className="image-gallery-custom-link-button"
-                      onClick={() => window.open(product.gallery[0].url, '_blank')}
+                      onClick={() => window.open(currentItem.url, '_blank')}
                       style={{
                         position: 'absolute',
-                        right: '60px',
+                        right: '16px',
                         bottom: '16px',
                         zIndex: 10,
-                        background: 'rgba(0, 0, 0, 0.5)',
                         color: 'white',
                         border: 'none',
-                        borderRadius: '50%',
                         width: '32px',
                         height: '32px',
                         display: 'flex',
