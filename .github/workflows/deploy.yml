@@ -34,6 +34,10 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
+      - name: 设置 Docker 镜像源
+        run: |
+          echo '{"registry-mirrors": ["https://docker.mirrors.ustc.edu.cn", "https://hub-mirror.c.163.com", "https://registry.docker-cn.com"]}' > ~/.docker/config.json
+
       - name: 构建并推送 Docker 镜像
         uses: docker/build-push-action@v5
         with:
@@ -42,6 +46,7 @@ jobs:
           tags: |
             lurecoder/ensoo-startup:latest
             lurecoder/ensoo-startup:v${{ env.VERSION }}
+          timeout: 300
 
       - name: 部署到服务器
         uses: appleboy/ssh-action@v1.0.3
